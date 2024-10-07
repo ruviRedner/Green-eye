@@ -23,4 +23,7 @@ const userSechma = new mongoose.Schema({
 
 const UserModel = mongoose.model("user", userSechma)
 
-module.exports = UserModel;
+module.exports = {
+    UserModel,
+    userSechma
+};
