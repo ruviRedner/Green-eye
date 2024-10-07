@@ -15,6 +15,7 @@ const login = async (user) => {
         const token = jwt.sign({
             user_name:dbUser.user_name,
             roll:dbUser.roll,
+            id:dbUser._id,
         },process.env.TOKEN_SECRET,{
             expiresIn: '3m',
         });
