@@ -1,8 +1,10 @@
 const  router  = require("express").Router()
 
-router.post('/login', ()=> {})
+const {login,logout} = require("../controllers/authController")
 
-router.delete('/logout', ()=> {})
+router.post('/login', login)
+
+router.delete('/logout', logout)
 
 
 

@@ -1,10 +1,11 @@
 const  router  = require("express").Router()
+const { register, getProfile, setSetting } = require("../controllers/userController");
 
-router.post("/register",()=>{})
+router.post("/register",register)
 
-router.get("/profile",()=>{})
+router.get("/profile",getProfile)
 
-router.patch("/setting",()=>{})
+router.patch("/setting",setSetting)
 
 
 module.exports =  router
