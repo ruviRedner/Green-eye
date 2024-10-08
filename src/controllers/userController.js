@@ -22,12 +22,9 @@ const getProfile = async(req,res)=>{
 
 const setSetting = async(req,res)=>{
     try {
-        await setSetting(req.body) 
-        res.status(200).json({
-            message: "User setting updated successfully"
-        }) 
+        
     } catch (error) {
-        res.status(400).json(error.message)
+        
           
     }}
 
