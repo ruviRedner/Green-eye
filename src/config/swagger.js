@@ -5,12 +5,13 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Swagger Express API',
+      title: 'Nachsal',
       version: '1.0.0',
-      description: 'A simple Express API with Swagger documentation',
+      description: 'A swagger for soldier nachsal ',
     },
   },
-  apis: ['./router/*.js'], // Path to your API routes
+  
+  apis: ['C:/Users/רובי/Desktop/Nachsal/src/router/*.js'], // Path to your API routes
 };
 
 const specs = swaggerJsdoc(options);
