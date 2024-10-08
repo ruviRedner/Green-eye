@@ -20,22 +20,14 @@ const createUser = async(user)=>{
         
     }
 }
-//founction to get profile user
-const getProfileUser = async () => {
-    try {
-        const dbUser = await  UserModel.findOne({user_name:req.user.user_name});
-        if(!dbUser) {
-            throw new Error("User not found")
-        }
-        return dbUser
-    } catch (error) {
-        console.log(error.message);
-        
-    }
-}
+
+
+
+
+
 
 
 module.exports = {
     createUser,
-    getProfileUser
+    getProfileUser,
 }
