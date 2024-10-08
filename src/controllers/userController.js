@@ -1,4 +1,4 @@
-const { createUser } = require("../services/userService")
+const { createUser, getProfileUser } = require("../services/userService")
 
 const register = async(req,res)=>{
   try {
@@ -14,9 +14,13 @@ const register = async(req,res)=>{
 
 const getProfile = async(req,res)=>{
     try {
-      
+      const userProfile = await getProfileUser()
+      res.status(200).json({
+        message: "user profile getting successfully",
+        data: userProfile
+      })
     } catch (error) {
-      
+      res.status(400).json(error.message)
     }}
 
 
