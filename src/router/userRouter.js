@@ -19,12 +19,34 @@ const { onlySoldiersAndCommanders } = require("../middlewares/authMiddlewares")
  *               password:
  *                 type: string
  *                 description: The password of the user.
+ *               roll:
+ *                 type: string
+ *                 description: The roll of the user.
+ *                 enum:
+ *                   - soldier
+ *                   - command
+ *               area:
+ *                 type: string
+ *                 description: The area of the user.
+ *                 enum:
+ *                   - center
+ *                   - north
+ *                   - west
+ *                   - south
+ *                   - east
+ *               units:
+ *                 type: array
+ *                 items:
+ *                   type: number
  *     examples:
  *       example1:
  *         summary: Example user data
  *         value:
  *           user_name: "john_doe"
  *           password: "password123"
+ *           roll: "soldier"
+ *           area: "center"
+ *           units: [1, 2, 3]
  *     responses:
  *       '201':
  *         description: User registered successfully.
@@ -33,6 +55,7 @@ const { onlySoldiersAndCommanders } = require("../middlewares/authMiddlewares")
  *       '500':
  *         description: Internal server error.
  */
+
 
 router.post("/register",register)
 
